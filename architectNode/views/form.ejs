@@ -1,0 +1,95 @@
+<%- include('./include/header.ejs') %>
+<%- include('./include/navbar.ejs') %>
+<div class="card container  shadow-lg pt-2 mb-5 bg-body rounded-5 rounded-end mt-5">
+  <div class="row g-0">
+      <div class="col-md-4">
+
+          <img src="https://img.freepik.com/free-psd/book-cover-mockup_125540-572.jpg?w=2000"
+              class="card-img-top rounded-5 mt-4 rounded-end" alt="..." style="max-height: 100%">
+
+      </div>
+
+      <div class="col-md-8 mt-1">
+          <div class="card-body ">
+              <div class="row  ">
+                  <div class="col">
+                      <p class="card-text text-blod h5" style="color: #07075c">Book name :<small
+                              class="text-muted">rich dad poor dad</small></p>
+                      <p class="card-text text-blod h5" style="color: #07075c">Author :<small
+                              class="text-muted">book</small></p>
+                      <p class="card-text text-blod h5" style="color: #07075c">Date :<small
+                              class="text-muted">10/02/1999</small></p>
+                  </div>
+                  <div class="col d-flex justify-content-end p-0">
+                      <button class="btn"><i class="bi bi-pen-fill"></i> </button>
+
+                      <button class="btn "> <i class="bi bi-trash3"></i> </button>
+                  </div>
+              </div>
+              <p class=" text-bold h5" style="color: #07075c"> description </p>
+              <p class=" text-muted ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque iste qui
+                  tenetur sed laudantium aliquid quibusdam doloremque, aspernatur magnam necessitatibus rem alias
+                  voluptatum repellat, sit obcaecati aperiam illo sequi excepturi.</p>
+
+          </div>
+          <div class="col-4 d-flex  justify-content-center ">
+            <div class="col-4"> 6 <i class="bi bi-hand-thumbs-up"></i>
+                7 <i class="bi bi-hand-thumbs-down"></i>
+            </div>
+        
+        </div>
+      </div>
+
+
+
+      <div class="row d-flex align-items-center ">
+        
+          <div class="col-7">
+
+              <div class="mb-2">
+                <form class=" p-3  " action="createOne" method="post" >
+                  <h1 class="text-center text-decoration-underline" style="color: #07075c;"> <i
+                      class="bi bi-bookmark-heart-fill"></i> commentaire</h1>
+                  <!--! name  -->
+                  <label for="exampleInputEmail1" class="form-label">name</label>
+                  <div class="mb-3">
+                    <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      placeholder="title">
+                  </div>
+                  <!-- !email -->
+                  <label for="exampleInputEmail1" class="form-label">email</label>
+                  <div class="mb-3">
+                    <input name="email" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                      placeholder="email">
+                  </div>
+                  <!-- !description -->
+                  <label for="floatingTextarea2">commentaire</label>
+                  <div class="form-floating mb-3">
+                    <textarea name="description" class="form-control" placeholder="content" id="floatingTextarea2"
+                      style="height: 100px"></textarea>
+                  </div>
+                  <!-- !submit -->
+                  <div class="container d-flex justify-content-end  ">
+                    <!-- <button type="submit" >Add categorie</button> -->
+                    <input type="submit" class="btn text-white text-center px-5 fw-5 " style="background-color: #07075c;"
+                      value="Add commentaire">
+                  </div>
+                </form>
+          </div>
+
+     
+
+      </div>
+
+  </div>
+  <!-- <div class="col d-flex justify-content-end mt-3">
+      <div class="col-1">
+      </div>
+      <div class="col-1">
+      </div>
+  </div> -->
+
+</div>
+</div>
+    <%- include('./include/footer.ejs') %>
+  

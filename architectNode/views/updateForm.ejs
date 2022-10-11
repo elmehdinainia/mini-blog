@@ -1,0 +1,33 @@
+<%- include('./include/header.ejs') %>
+  <%- include('./include/navbar.ejs') %>
+  <div class=" d-flex justify-content-center  mt-5">
+    <form class="col-md-6  col-12 border p-3 shadow " action="/updateOne" method="post"  >
+      <h1 class="text-center text-decoration-underline" style="color: #07075c;"> <i class="bi bi-bookmark-heart-fill"></i> Update Commnentaire </h1>
+     <!-- title  -->
+      <label for="exampleInputEmail1" class="form-label">Title</label>
+      <!--! title -->
+        <div class="mb-3">
+          <input  name= "name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="title" value="<%= commentaire.name %>">
+          <input  name= "id" type="hidden" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" 
+            placeholder="title" value="  <%= commentaire.id %>">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Title</label>
+          <input  name= "email" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="email" value="<%= commentaire.name %>">
+
+        </div>
+     <!-- !description -->
+      <label for="floatingTextarea2">description</label>
+        <input name="description" value="<%= commentaire.description %>" class="form-control"  >
+      <!-- </div> -->
+      <!-- !submit -->
+      <div class="container d-flex justify-content-center  m-5 ">
+        <input type="submit" class="btn text-white text-center px-5 fw-5 " style="background-color: #07075c;" value="save changes" >
+      </div>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+
+
+<%- include('./include/header.ejs') %>
+<%- include('./include/navbar.ejs') %>
+
+<div class="container flex-wrap d-flex" style="margin-bottom:30%">
+      <% commentaire.forEach(e=>{%>
+        <div class="commt-picture col-3  ">
+          <img src="https://wac-cdn.atlassian.com/fr/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=560" alt="" style="width: 100px;
+          border-radius: 50%;
+          border: 4;margin: 40px 10px 10px 30px;">
+          </div>
+  <div class="comment  col-7 container " style="background-color: #CFCAC6;">
+      <p class="comment-name"><span class="h5">Name</span> :<%=e.name%></p>
+      <span class="comment-dat"> <span class="h5">Email </span> :<%=e.email%></p>
+  <div class="comment-content">
+      <p><br>
+       <span class="h5">description</span> : <%=e.description%>
+      </p>
+  </div>
+  <div class="comment-action d-flex mx-5">
+    <div>
+      <form action="deleteOne" method="post" class="col-2">
+        <input type="hidden" name="id" value="<%= e.id %>" name="id">
+        <button type="submit"  class="btn  text-danger float-end mb-2 " > <i class="bi bi-x-circle-fill"></i> </button>
+      </form>
+    </div>
+
+<div>
+  <form action="getOne" method="post"  class="col-2">
+    <input type="hidden" name="id" value="<%= e.id %>" name="id">
+    <button type="submit"  class="btn  text-success float-end mb-2 " > <i class="bi bi-pen-fill"></i></button>
+  </form>
+</div>
+ 
+  </div>
+</div>
+<% })%>
+</div>
+
+
+  <%- include('./include/footer.ejs') %>
